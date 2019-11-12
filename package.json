@@ -1,10 +1,11 @@
 {
   "name": "get-css-props",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/cli.js",
   "scripts": {
-    "prepack": "tsc -b"
+    "prepack": "tsc -b",
+    "test": "tsc -b && ./dist/cli.js --outPath './data'"
   },
   "author": "Syler",
   "license": "MIT",
@@ -19,13 +20,12 @@
     "url": "https://github.com/TheRealSyler/get-css-props"
   },
   "dependencies": {
-    "@types/puppeteer": "^1.20.2",
+    "@sorg/log": "^1.0.0",
     "node-fetch": "^2.6.0",
     "puppeteer": "^2.0.0"
   },
   "devDependencies": {
-    "s.logger": "/usr/lib/node_modules/s.logger",
-    "chalk": "^2.4.2",
+    "@types/puppeteer": "^1.20.2",
     "typescript": "^3.6.3",
     "@types/node": "^12.7.7"
   }
