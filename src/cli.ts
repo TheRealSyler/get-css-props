@@ -222,7 +222,7 @@ class Start {
     return `${this.outPath}${this.prefix ? this.prefix + '.' : ''}${name}.${this.fileType}`;
   }
   private getTypeText(name: string) {
-    return /ts|js/.test(this.fileType)
+    return /^ts$|^js$/.test(this.fileType)
       ? `export const ${name}${
           this.fileType === 'ts'
             ? ': {[key: string]: {status?: string, mdn_url?: string, values?: Array<{name: string, desc: string}>,desc?: string}}'
